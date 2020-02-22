@@ -1,0 +1,103 @@
+
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Efect Buttlerfly</title>
+</head>
+<style>
+    body{
+        font-size: 24px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+</style>
+<body>
+    <script>
+        /* 
+        Zo = a + bi
+        Z1 = Zo²+ c
+        Z2 = Z1² + c 
+        */
+
+
+        A = prompt("Digite o valor de a");
+        B = prompt("Digite o valor de i");
+        C = prompt("Digite o valor da constante");
+        Z0x = A
+        Z0y = B 
+        Z1x = A*A + -1*B*B + C*1
+        Z1y = 2*A*B
+        Z2x = Z1x*Z1x + -1*Z1y*Z1y + C*1
+        Z2y = 2*Z1x*Z1y
+        Z3x = Z2x*Z2x + -1*Z2y*Z2y + C*1
+        Z3y = 2*Z2x*Z2y
+        
+        document.write("Pontos :"+ "<br>" +"<br>");
+        document.write("P1= ("+ "\n" + Z0x +"," +"\n"+ Z0y +")"+"<br>");
+        document.write("P2= ("+ "\n" + Z1x +"," +"\n"+ Z1y +")"+"<br>");
+        document.write("P3= ("+ "\n" + Z2x +"," +"\n"+ Z2y +")"+"<br>");
+        document.write("P4= ("+ "\n" + Z3x +"," +"\n"+ Z3y +")"+"<br>"+"<br>");
+
+        A1 = Math.abs(Z0x*Z0y)
+        A2 = Math.abs(Z1x*Z1y)
+        A3 = Math.abs(Z2x*Z2y)
+        document.write("Área :"+ "<br>" +"<br>");
+        document.write("A1 =" + "\n" + A1 +"<br>");
+        document.write("A2 =" + "\n" + A2 +"<br>");
+        document.write("A3 =" + "\n" + A3 +"<br>"+"<br>");
+
+        M01x = Z0x-Z1x
+        M01y = Z0y-Z1y
+        M12x = Z1x-Z2x
+        M12y = Z1y-Z2y
+        M02x = Z0x-Z2x
+        M02y = Z0y-Z2y
+        D1 = Math.sqrt(M01x*M01x + M01y*M01y)
+        D2 = Math.sqrt(M12x*M12x + M12y*M12y)
+        D3 = Math.sqrt(M02x*M02x + M02y*M02y)
+        document.write("Distância :"+ "<br>" +"<br>");
+        document.write("P1 - P2 =" + "\n" + D1 +"<br>");
+        document.write("P2 - P3 =" + "\n" + D2 +"<br>");
+        document.write("P1 - P3 =" + "\n" + D3 +"<br>" +"<br>");
+
+        RA2A1 = A2/A1
+        RA3A2 = A3/A2
+        RA3A1 = A3/A1
+        document.write("Razão da área :"+ "<br>" +"<br>");
+        document.write("A2/A1 =" + "\n" + RA2A1 +"<br>");
+        document.write("A3/A2 =" + "\n" + RA3A2 +"<br>");
+        document.write("A3/A1 =" + "\n" + RA3A1 +"<br>" +"<br>");
+        
+
+        RD2D1 = D2/D1
+        RD3D2 = D3/D2
+        RD3D1 = D3/D1
+        document.write("Razão da distância :"+ "<br>" +"<br>");
+        document.write("D2/D1 =" + "\n" + RD2D1 +"<br>");
+        document.write("D3/D2 =" + "\n" + RD3D2 +"<br>");
+        document.write("D3/D1 =" + "\n" + RD3D1 +"<br>" +"<br>");
+        
+        Y10 = Z1y - Z0y
+        X10 = Z1x - Z0x
+        Y21 = Z2y - Z1y
+        X21 = Z2x - Z1x
+        Y20 = Z2y - Z0y
+        X20 = Z2x - Z0x
+
+        AN1 = Y10/X10
+        AN2 = Y21/X21
+        AN3 = Y20/X20
+        document.write("Valor da tangente do ângulo :"+ "<br>" +"<br>");
+        document.write("AN1 =" + "\n" + AN1 +"<br>");
+        document.write("AN2 =" + "\n" + AN2 +"<br>");
+        document.write("AN3 =" + "\n" + AN3 +"<br>" +"<br>");
+        
+        
+
+
+
+    </script>
+    
+</body>
+</html>
